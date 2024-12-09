@@ -47,6 +47,10 @@
 				<groupId>org.hibernate.orm</groupId>
 				<artifactId>hibernate-community-dialects</artifactId>
 		</dependency>
+		<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 	<!-- Wizard add -->
 		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -77,12 +81,29 @@
 </dependency> -->
 	</dependencies>
 
-	<build>
+	<!-- <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+		</plugins>
+	</build> -->
+
+	<build>
+		<plugins>
+				<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
+						<version>3.2.1</version>
+						<executions>
+								<execution>
+										<goals>
+												<goal>repackage</goal>
+										</goals>
+								</execution>
+						</executions>
+				</plugin>
 		</plugins>
 	</build>
 
